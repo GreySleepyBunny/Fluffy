@@ -34,14 +34,15 @@ const Panel = () => {
         api_GetData("Hugo").then(res => {
             let result = res.val();
             let datas = [];
-            Object.keys(result).forEach(k => {
-                return Object.keys(result[k]).forEach(d => {
-                    datas.push({
-                        ...result[k][d],
-                        key: d,
+            result &&
+                Object.keys(result).forEach(k => {
+                    return Object.keys(result[k]).forEach(d => {
+                        datas.push({
+                            ...result[k][d],
+                            key: d,
+                        });
                     });
                 });
-            });
 
             datas = datas.sort((a, b) => {
                 return a > b ? 1 : -1;

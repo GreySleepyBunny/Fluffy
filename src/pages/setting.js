@@ -44,7 +44,7 @@ const Panel = props => {
                     <input
                         readOnly={props.IsEdit === true}
                         className="form-control"
-                        type="text"
+                        type="date"
                         defaultValue={stateData[columnDefs.date.col]}
                         onBlur={e => {
                             EditField(e.target.value, columnDefs.date.col);
