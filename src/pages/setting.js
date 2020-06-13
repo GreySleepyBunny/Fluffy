@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { columnDefs } from "../common/dataDefs";
 import { btn } from "../style/css";
 import "../style/loading.css";
