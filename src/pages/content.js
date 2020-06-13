@@ -51,6 +51,7 @@ const Content = props => {
                         float: "right",
                         marginTop: "-10px",
                         marginRight: "-10px",
+                        borderRadius: "10px",
                     }}
                 />
                 <div style={{ marginBottom: "1.5em" }}>
