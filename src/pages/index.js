@@ -20,8 +20,8 @@ const page = {
 const Panel = () => {
     const [stateDatas, updateDatas] = useState({
         datas: [],
-        page: page.main,
-        processing: false,
+        page: page.edit,
+        processing: true,
         isEdit: false,
         idx: null,
     });
@@ -101,7 +101,12 @@ const Panel = () => {
     };
 
     const OnDelete = () => {
-        if (window.confirm("Are you sure about that?")) {
+        if (window.confirm("你確定要刪?")) {
+            updateDatas(prevState => ({
+                ...prevState,
+                processing: true,
+            }));
+
             let curr_data = stateDatas.datas[stateDatas.idx];
             api_DeleteData("Hugo", curr_data.date, curr_data.key).then(() => {
                 GetData();
