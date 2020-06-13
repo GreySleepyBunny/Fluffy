@@ -1,20 +1,8 @@
-import React from 'react';
-import FufflyFood from './pages';
-
-const getUrlParas = () =>{
-  var vars = {};
-  
-  window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, (str, key, value)=>{
-      vars[key] = value;
-  });
-  return vars;
-}
+import React from "react";
+import FufflyFood from "./pages";
 
 function App() {
-  const Id = getUrlParas().d;
-  return (
-        <FufflyFood d={Id}/>
-  );
+    return <FufflyFood />;
 }
 
 export default App;
