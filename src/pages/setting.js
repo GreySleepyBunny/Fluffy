@@ -60,6 +60,49 @@ const Panel = props => {
                             />
                         </div>
                         <div className="form-group">
+                            <label>吃飯的是</label>
+                            <div className="radio">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="optradio"
+                                        value="Hugo"
+                                        checked={
+                                            stateData[columnDefs.child.col] ===
+                                            "Hugo"
+                                        }
+                                        onChange={e => {
+                                            EditField(
+                                                e.target.value,
+                                                columnDefs.child.col
+                                            );
+                                        }}
+                                    />
+                                    <span style={{ padding: "5px" }}>鵝組</span>
+                                </label>
+                            </div>
+                            <div className="radio">
+                                <label>
+                                    <input
+                                        type="radio"
+                                        name="optradio"
+                                        value="Molly"
+                                        checked={
+                                            stateData[columnDefs.child.col] ===
+                                            "Molly"
+                                        }
+                                        onChange={e => {
+                                            EditField(
+                                                e.target.value,
+                                                columnDefs.child.col
+                                            );
+                                        }}
+                                    />
+                                    <span style={{ padding: "5px" }}>女鵝</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div className="form-group">
                             <label>食用量(e.g. 50g則輸入50)</label>
                             <input
                                 className="form-control"

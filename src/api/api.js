@@ -37,12 +37,12 @@ export const api_GetData = child => {
     return firebase.database().ref(`${child}/`).once("value");
 };
 
-export const api_UpdateData = (child, date, unixTime, data) => {
+export const api_UpdateData = (child, key, data) => {
     var updates = {};
-    updates[`/${child}/${date}/${unixTime}`] = data;
+    updates[`/${child}/${key}`] = data;
     return firebase.database().ref().update(updates);
 };
 
-export const api_DeleteData = (child, date, unixTime) => {
-    return firebase.database().ref(`${child}/${date}/${unixTime}`).remove();
+export const api_DeleteData = (child, key) => {
+    return firebase.database().ref(`${child}/${key}`).remove();
 };

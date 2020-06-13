@@ -45,6 +45,14 @@ const Content = props => {
                     background:
                         "linear-gradient(to bottom right, #dcdcdc, #b0c4de)",
                 }}>
+                <img
+                    src={`./img/${props[columnDefs.child.col]}.jpg`}
+                    style={{
+                        float: "right",
+                        marginTop: "-10px",
+                        marginRight: "-10px",
+                    }}
+                />
                 <div style={{ marginBottom: "1.5em" }}>
                     <h5>本次戰績</h5>
                     <div style={{ marginLeft: ".5em" }}>

@@ -31,7 +31,7 @@ const Panel = () => {
     }, []);
 
     const GetData = () => {
-        api_GetData("Hugo").then(res => {
+        api_GetData("Meow").then(res => {
             let result = res.val();
             let datas = [];
             result &&
@@ -39,7 +39,7 @@ const Panel = () => {
                     return Object.keys(result[k]).forEach(d => {
                         datas.push({
                             ...result[k][d],
-                            key: d,
+                            key: `${k}/${d}`,
                         });
                     });
                 });
@@ -78,14 +78,14 @@ const Panel = () => {
 
         if (stateDatas.isEdit) {
             let curr_data = stateDatas.datas[stateDatas.idx];
-            api_UpdateData("Hugo", curr_data.date, curr_data.key, {
+            api_UpdateData("Meow", curr_data.key, {
                 ...datas,
                 lastEditTime: moment().unix(),
             }).then(() => {
                 GetData();
             });
         } else {
-            api_InsertData("Hugo", datas).then(() => {
+            api_InsertData("Meow", datas).then(() => {
                 GetData();
             });
         }
@@ -108,7 +108,7 @@ const Panel = () => {
             }));
 
             let curr_data = stateDatas.datas[stateDatas.idx];
-            api_DeleteData("Hugo", curr_data.date, curr_data.key).then(() => {
+            api_DeleteData("Meow", curr_data.key).then(() => {
                 GetData();
             });
         }

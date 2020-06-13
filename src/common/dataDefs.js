@@ -31,4 +31,5 @@ export const columnDefs = {
     throwUp: { col: "throwUp", defaultValue: false },
     others: { col: "others" },
     cereals: { col: "cereals", defaultValue: false },
+    child: { col: "child", defaultValue: "Hugo" },
 };
