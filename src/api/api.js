@@ -14,12 +14,12 @@ const getUrlParas = () => {
 
 const firebaseConfig = {
     apiKey: getUrlParas().d,
-    authDomain: "fluffy-6070b.firebaseapp.com",
-    databaseURL: "https://fluffy-6070b.firebaseio.com",
-    projectId: "fluffy-6070b",
-    storageBucket: "fluffy-6070b.appspot.com",
+    authDomain: `${getUrlParas().p}.firebaseapp.com`,
+    databaseURL: `https://${getUrlParas().p}.firebaseio.com`,
+    projectId: getUrlParas().p,
+    storageBucket: `${getUrlParas().p}.appspot.com`,
     messagingSenderId: "682706664864",
-    appId: "1:682706664864:web:2ca751fe7534e708c578c5",
+    appId: getUrlParas().id,
     measurementId: "G-09W4SMXHFH",
 };
 
