@@ -4,7 +4,7 @@
 	"description": "For Hugo and Freja",
 	"icons": [
 		{
-			"src": "img/paw.png",
+			"src": "img/iosIcon.png",
 			"sizes": "256x256",
 			"type": "image/png"
 		}
